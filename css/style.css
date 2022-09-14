@@ -207,18 +207,34 @@ select:-webkit-autofill:focus {
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
+  margin-bottom: 12px;
 }
 
 .item__text {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  margin-bottom: 25px;
 }
+
 .item__info {
 }
+
 .info {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  justify-content: space-between;
 }
+
 .info__date {
+  margin-right: auto;
 }
+
 .info__name {
 }
+
 .app__plus-btn {
 }
 
