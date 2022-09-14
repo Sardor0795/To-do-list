@@ -73,6 +73,14 @@ img {
   display: block;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0;
+}
+
 a,
 span,
 button {
@@ -139,7 +147,13 @@ select:-webkit-autofill:focus {
 }
 
 .app {
+  max-width: 414px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-top: 31px;
+  padding-bottom: 46px;
 }
+
 .app__title {
 }
 .container {
