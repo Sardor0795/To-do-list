@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To do list</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <main class="main-content">
-        <div class="app">
-            <h1 class="app__title">ToDolist</h1>
-            <div class="container">
-                <div class="app__btn-wrapper">
-                    <button class="app__btn active">Barchasi</button>
-                    <button class="app__btn">Bajarilganlar</button>
-                    <button class="app__btn">Bajarilmaganlar</button>
-                </div>
-            </div>
-            <span class="line"></span>
-            <div class="container">
-                <ul class="toDoList">
-                </ul>
-            </div>
-            <div class="app__plus-btn-wrapper"><button class="app__plus-btn">+</button></div>
-
-            <div class="modal">
-                <form name="task" class="form">
-                    <h3 class="form__heading">Yangi topshiriq</h3>
-                    <input name="title" class="form__title" type="text" placeholder="Topshiriq sarlavhasi">
-                    <textarea name="text" class="form__text" placeholder="Topshiriq matni"></textarea>
-                    <input name="date" class="form__date" type="date">
-                    <input name="partner" class="form__partner" type="text" placeholder="Guruh a’zosi">
-                    <button class="form__add-btn" type="submit">Qo’shish</button>
-                    <span class="form__close-btn"></span>
-                </form>
-            </div>
-
+      <div class="app">
+        <h1 class="app__title">ToDolist</h1>
+        <div class="container">
+          <div class="app__btn-wrapper">
+            <button class="app__btn active" onclick="render(tasks)">
+              Barchasi
+            </button>
+            <button class="app__btn" onclick="filterDone()">
+              Bajarilganlar
+            </button>
+            <button class="app__btn" onclick="filterUndone()">
+              Bajarilmaganlar
+            </button>
+          </div>
         </div>
+        <span class="line"></span>
+        <div class="container">
+          <ul class="toDoList"></ul>
+        </div>
+        <div class="app__plus-btn-wrapper">
+          <button class="app__plus-btn">+</button>
+        </div>
+
+        <div class="modal">
+          <form name="task" class="form">
+            <h3 class="form__heading">Yangi topshiriq</h3>
+            <input
+              name="title"
+              class="form__title"
+              type="text"
+              placeholder="Topshiriq sarlavhasi"
+            />
+            <textarea
+              name="text"
+              class="form__text"
+              placeholder="Topshiriq matni"
+            ></textarea>
+            <input name="date" class="form__date" type="date" />
+            <input
+              name="partner"
+              class="form__partner"
+              type="text"
+              placeholder="Guruh a’zosi"
+            />
+            <button class="form__add-btn" type="submit">Qo’shish</button>
+            <span class="form__close-btn"></span>
+          </form>
+        </div>
+      </div>
     </main>
 
-
-
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>

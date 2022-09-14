@@ -22,25 +22,16 @@ elModalCloseBtn.addEventListener("click", () => {
   elModal.classList.remove("active");
 });
 
-// const elItems = document.querySelectorAll(".toDoList .item");
-
-// elItems.forEach((item) => {
-//   item.addEventListener("click", () => {
-//     item.classList.toggle("finished");
-//   });
-// });
-
 const elTask = document.forms.task;
 const elToList = document.querySelector(".toDoList");
 
 const tasks = [];
 
-const render = () => {
+const render = (array) => {
   elToList.innerHTML = "";
-  tasks.forEach((task, i) => {
+  array.forEach((task, i) => {
     elToList.innerHTML += `
-          <li class="toDoList__item item">
-
+          <li class="toDoList__item item ${task.status}" onclick="changeStatus(${i})">
               <h3 class="item__title">${task.title}</h3>
               <p class="item__text">${task.text}</p>
               <div class="item__info info">
@@ -55,9 +46,38 @@ const render = () => {
 
 const del = (i) => {
   tasks.splice(i, 1);
-  render();
+  render(tasks);
   let strTasks = JSON.stringify(tasks);
   localStorage.setItem("tasks", strTasks);
+};
+
+const changeStatus = (i) => {
+  if (tasks[i].status == false) {
+    tasks[i].status = true;
+  } else if (tasks[i].status == true) {
+    tasks[i].status = false;
+  }
+  let changedTasks = JSON.stringify(tasks);
+  localStorage.setItem("tasks", changedTasks);
+  render(tasks);
+};
+
+const filterDone = () => {
+  let fltTasks = tasks.filter((fltrd) => {
+    if (fltrd.status == true) {
+      return fltrd;
+    }
+  });
+  render(fltTasks);
+};
+
+const filterUndone = () => {
+  let fltTasks = tasks.filter((fltrd) => {
+    if (fltrd.status == false) {
+      return fltrd;
+    }
+  });
+  render(fltTasks);
 };
 
 if (localStorage.getItem("tasks")) {
@@ -66,7 +86,7 @@ if (localStorage.getItem("tasks")) {
   prsTasks.forEach((item) => {
     tasks.push(item);
   });
-  render();
+  render(tasks);
 }
 
 elTask.addEventListener("submit", (e) => {
@@ -75,11 +95,12 @@ elTask.addEventListener("submit", (e) => {
   for (let k of elTask) {
     if (k.getAttribute("name")) {
       task[k.getAttribute("name")] = k.value;
+      task["status"] = false;
     }
   }
   tasks.push(task);
   elTask.reset();
-  render();
+  render(tasks);
   elModal.classList.remove("active");
   let strTasks = JSON.stringify(tasks);
   localStorage.setItem("tasks", strTasks);
