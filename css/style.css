@@ -151,8 +151,7 @@ select:-webkit-autofill:focus {
   max-width: 414px;
   margin: 0 auto;
   background-color: #fff;
-  padding-top: 31px;
-  padding-bottom: 46px;
+  padding-top: 20px;
   position: relative;
   height: 100%;
 }
@@ -202,8 +201,10 @@ select:-webkit-autofill:focus {
 }
 
 .toDoList {
-  padding-top: 60px;
-  padding-bottom: 53px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  height: 400px;
+  overflow-y: auto;
 }
 
 .toDoList__item:not(:last-child) {

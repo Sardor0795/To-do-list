@@ -22,15 +22,13 @@ elModalCloseBtn.addEventListener("click", () => {
   elModal.classList.remove("active");
 });
 
-const elItems = document.querySelectorAll(".item");
+// const elItems = document.querySelectorAll(".toDoList .item");
 
-elItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    item.classList.toggle("finished");
-  });
-});
-
-// Form elements
+// elItems.forEach((item) => {
+//   item.addEventListener("click", () => {
+//     item.classList.toggle("finished");
+//   });
+// });
 
 const elTask = document.forms.task;
 const elToList = document.querySelector(".toDoList");
@@ -65,8 +63,6 @@ elTask.addEventListener("submit", (e) => {
   }
   tasks.push(task);
   elTask.reset();
-  console.log(task);
-  console.log(tasks);
-
   render();
+  elModal.classList.remove("active");
 });
