@@ -64,7 +64,7 @@ const changeStatus = (i) => {
 
 const filterDone = () => {
   let fltTasks = tasks.filter((fltrd) => {
-    if (fltrd.status == true) {
+    if (fltrd.status === true) {
       return fltrd;
     }
   });
@@ -73,7 +73,7 @@ const filterDone = () => {
 
 const filterUndone = () => {
   let fltTasks = tasks.filter((fltrd) => {
-    if (fltrd.status == false) {
+    if (fltrd.status === false) {
       return fltrd;
     }
   });
