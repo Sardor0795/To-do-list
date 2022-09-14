@@ -212,6 +212,16 @@ select:-webkit-autofill:focus {
   padding: 15px;
   background-color: var(--status-false);
   cursor: pointer;
+  transition: color 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.item:hover {
+  opacity: 0.8;
+}
+
+.item:active {
+  opacity: 0.6;
+  transform: translateY(2px);
 }
 
 .item__title {
@@ -250,6 +260,16 @@ select:-webkit-autofill:focus {
   color: #fff;
   border-radius: 50%;
   margin: 0 auto;
+  transition: color 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.app__plus-btn:hover {
+  opacity: 0.8;
+}
+
+.app__plus-btn:active {
+  opacity: 0.6;
+  transform: translateY(2px);
 }
 
 /* RETINA BG */
