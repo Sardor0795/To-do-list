@@ -289,15 +289,73 @@ select:-webkit-autofill:focus {
   width: 100%;
   padding: 24px 24px 45px 24px;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .form__heading {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  margin-bottom: 20px;
 }
-.form__title {
+
+.form__title,
+.form__text,
+.form__partner,
+.form__date {
+  width: 100%;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 10px 16px;
+  border: 1px solid #7a7a7a;
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
+
 .form__text {
+  min-height: 71px;
+  resize: vertical;
 }
-.form__select {
+
+.form__partner {
+  margin-bottom: 76px;
 }
+
 .form__add-btn {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 10px 0;
+  background-color: #7ed369;
+  min-width: 168px;
+  display: inline-block;
+  border-radius: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  transition: color 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.form__add-btn:hover {
+  opacity: 0.8;
+}
+
+.form__add-btn:active {
+  opacity: 0.6;
+  transform: translateY(2px);
+}
+
+.form__close-btn {
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/dell-img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 14px;
+  right: 14px;
 }
