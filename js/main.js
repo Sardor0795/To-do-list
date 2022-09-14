@@ -98,10 +98,13 @@ elTask.addEventListener("submit", (e) => {
       task["status"] = false;
     }
   }
-  tasks.push(task);
-  elTask.reset();
-  render(tasks);
-  elModal.classList.remove("active");
-  let strTasks = JSON.stringify(tasks);
-  localStorage.setItem("tasks", strTasks);
+
+  if (task.title && task.text && task.date && task.partner) {
+    tasks.push(task);
+    elTask.reset();
+    render(tasks);
+    elModal.classList.remove("active");
+    let strTasks = JSON.stringify(tasks);
+    localStorage.setItem("tasks", strTasks);
+  }
 });
