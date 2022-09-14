@@ -39,19 +39,28 @@ const render = () => {
   elToList.innerHTML = "";
   tasks.forEach((task) => {
     elToList.innerHTML += `
-        <li class="toDoList__item item">
+          <li class="toDoList__item item">
 
-            <h3 class="item__title">${task.title}</h3>
-            <p class="item__text">${task.text}</p>
-            <div class="item__info info">
-                <span class="info__date">${task.date}</span>
-                <span class="info__name">${task.partner}</span>
-            </div>
+              <h3 class="item__title">${task.title}</h3>
+              <p class="item__text">${task.text}</p>
+              <div class="item__info info">
+                  <span class="info__date">${task.date}</span>
+                  <span class="info__name">${task.partner}</span>
+              </div>
 
-        </li>
-        `;
+          </li>
+          `;
   });
 };
+
+if (localStorage.getItem("tasks")) {
+  let prsTasks = localStorage.getItem("tasks");
+  prsTasks = JSON.parse(prsTasks);
+  prsTasks.forEach((item) => {
+    tasks.push(item);
+  });
+  render();
+}
 
 elTask.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -64,5 +73,7 @@ elTask.addEventListener("submit", (e) => {
   tasks.push(task);
   elTask.reset();
   render();
-//   elModal.classList.remove("active");
+  elModal.classList.remove("active");
+  let strTasks = JSON.stringify(tasks);
+  localStorage.setItem("tasks", strTasks);
 });
