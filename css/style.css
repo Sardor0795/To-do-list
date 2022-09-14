@@ -152,8 +152,11 @@ select:-webkit-autofill:focus {
   margin: 0 auto;
   background-color: #fff;
   padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .app__title {
@@ -203,8 +206,15 @@ select:-webkit-autofill:focus {
 .toDoList {
   margin-top: 40px;
   margin-bottom: 20px;
-  height: 400px;
+  height: 60vh;
   overflow-y: auto;
+  border: 1px solid rgb(7, 42, 238);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.toDoList::-webkit-scrollbar {
+  width: 0;/* Mostly for vertical scrollbars */
 }
 
 .toDoList__item:not(:last-child) {
@@ -216,6 +226,7 @@ select:-webkit-autofill:focus {
   background-color: var(--status-false);
   cursor: pointer;
   transition: color 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+  border-radius: 15px;
 }
 
 .item.finished {

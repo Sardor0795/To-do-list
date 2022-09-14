@@ -64,5 +64,5 @@ elTask.addEventListener("submit", (e) => {
   tasks.push(task);
   elTask.reset();
   render();
-  elModal.classList.remove("active");
+//   elModal.classList.remove("active");
 });
