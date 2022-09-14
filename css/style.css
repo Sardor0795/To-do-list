@@ -175,11 +175,21 @@ select:-webkit-autofill:focus {
   line-height: 14px;
   padding: 8px 0;
   text-align: center;
+  transition: color 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
 }
 
 .app__btn.active {
   background-color: #ff0000;
   color: #fff;
+}
+
+.app__btn:hover {
+  opacity: 0.8;
+}
+
+.app__btn:active {
+  opacity: 0.6;
+  transform: translateY(2px);
 }
 
 .line {
