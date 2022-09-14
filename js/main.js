@@ -52,10 +52,12 @@ const del = (i) => {
 };
 
 const changeStatus = (i) => {
-  if (tasks[i].status == false) {
-    tasks[i].status = true;
-  } else if (tasks[i].status == true) {
-    tasks[i].status = false;
+  if (tasks[0]) {
+    if (tasks[i].status == false) {
+      tasks[i].status = true;
+    } else if (tasks[i].status == true) {
+      tasks[i].status = false;
+    }
   }
   let changedTasks = JSON.stringify(tasks);
   localStorage.setItem("tasks", changedTasks);
