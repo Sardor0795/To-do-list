@@ -76,7 +76,8 @@ img {
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
   padding: 0;
   margin: 0;
 }
@@ -155,23 +156,59 @@ select:-webkit-autofill:focus {
 }
 
 .app__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 7px;
 }
-.container {
-}
+
 .app__btn-wrapper {
+  width: 100%;
+  display: flex;
 }
+
 .app__btn {
+  width: 33.33%;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 8px 0;
+  text-align: center;
 }
+
+.app__btn.active {
+  background-color: #ff0000;
+  color: #fff;
+}
+
 .line {
+  height: 1px;
+  background-color: #000;
+  width: 100%;
+  display: block;
 }
+
 .toDoList {
+  padding-top: 60px;
+  padding-bottom: 53px;
 }
-.toDoList__item {
+
+.toDoList__item:not(:last-child) {
+  margin-bottom: 20px;
 }
+
 .item {
+  padding: 15px;
+  background-color: var(--status-false);
 }
+
 .item__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
 }
+
 .item__text {
 }
 .item__info {
