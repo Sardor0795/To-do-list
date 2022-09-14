@@ -1,7 +1,8 @@
 /* CUSTOM PROPERTIES */
 
 :root {
-  --main-color: #3f3f3f;
+  --status-true: #9fe3e8;
+  --status-false: #f4a4a9;
 }
 
 /* FONTS */
