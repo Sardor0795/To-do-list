@@ -283,6 +283,11 @@ select:-webkit-autofill:focus {
   left: 0;
   background-color: rgba(0, 0, 0, 0.68);
   padding: 90px 20px;
+  display: none;
+}
+
+.modal.active {
+  display: block;
 }
 
 .form {
