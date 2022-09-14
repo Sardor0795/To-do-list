@@ -33,16 +33,40 @@ elItems.forEach((item) => {
 // Form elements
 
 const elTask = document.forms.task;
+const elToList = document.querySelector(".toDoList");
 
 const tasks = [];
+
+const render = () => {
+  elToList.innerHTML = "";
+  tasks.forEach((task) => {
+    elToList.innerHTML += `
+        <li class="toDoList__item item">
+
+            <h3 class="item__title">${task.title}</h3>
+            <p class="item__text">${task.text}</p>
+            <div class="item__info info">
+                <span class="info__date">${task.date}</span>
+                <span class="info__name">${task.partner}</span>
+            </div>
+
+        </li>
+        `;
+  });
+};
 
 elTask.addEventListener("submit", (e) => {
   e.preventDefault();
   let task = {};
   for (let k of elTask) {
-    if (k.value) {
+    if (k.getAttribute("name")) {
       task[k.getAttribute("name")] = k.value;
     }
   }
   tasks.push(task);
+  elTask.reset();
+  console.log(task);
+  console.log(tasks);
+
+  render();
 });
