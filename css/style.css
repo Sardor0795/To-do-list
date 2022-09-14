@@ -138,6 +138,39 @@ select:-webkit-autofill:focus {
   flex-grow: 1;
 }
 
+.app {
+}
+.app__title {
+}
+.container {
+}
+.app__btn-wrapper {
+}
+.app__btn {
+}
+.line {
+}
+.toDoList {
+}
+.toDoList__item {
+}
+.item {
+}
+.item__title {
+}
+.item__text {
+}
+.item__info {
+}
+.info {
+}
+.info__date {
+}
+.info__name {
+}
+.app__plus-btn {
+}
+
 /* RETINA BG */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
