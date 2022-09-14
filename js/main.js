@@ -30,3 +30,9 @@ elItems.forEach((item) => {
   });
 });
 
+const elTask = document.forms.task;
+
+elTask.addEventListener("submit", (e) => {
+  e.preventDefault();
+  
+});
