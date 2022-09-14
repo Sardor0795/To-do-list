@@ -37,7 +37,7 @@ const tasks = [];
 
 const render = () => {
   elToList.innerHTML = "";
-  tasks.forEach((task) => {
+  tasks.forEach((task, i) => {
     elToList.innerHTML += `
           <li class="toDoList__item item">
 
@@ -47,10 +47,17 @@ const render = () => {
                   <span class="info__date">${task.date}</span>
                   <span class="info__name">${task.partner}</span>
               </div>
-
+            <span class="item__dell" onclick="del(${i})"></span>
           </li>
           `;
   });
+};
+
+const del = (i) => {
+  tasks.splice(i, 1);
+  render();
+  let strTasks = JSON.stringify(tasks);
+  localStorage.setItem("tasks", strTasks);
 };
 
 if (localStorage.getItem("tasks")) {

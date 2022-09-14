@@ -214,7 +214,7 @@ select:-webkit-autofill:focus {
 }
 
 .toDoList::-webkit-scrollbar {
-  width: 0;/* Mostly for vertical scrollbars */
+  width: 0; /* Mostly for vertical scrollbars */
 }
 
 .toDoList__item:not(:last-child) {
@@ -227,6 +227,24 @@ select:-webkit-autofill:focus {
   cursor: pointer;
   transition: color 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
   border-radius: 15px;
+  position: relative;
+}
+
+.item__dell {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/dell-img.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: all 0.3s ease;
+}
+
+.item__dell:hover {
+  transform: scale(1.1);
 }
 
 .item.finished {
