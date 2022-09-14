@@ -4,6 +4,26 @@
   --main-color: #3f3f3f;
 }
 
+/* FONTS */
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto-Regular.woff2") format("woff2"),
+    url("../font/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/Roboto-Bold.woff2") format("woff2"),
+    url("../font/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* GLOBAL */
 
 html {
@@ -28,12 +48,10 @@ body {
   flex-direction: column;
   height: 100%;
   background-color: #fff;
-  color: #222;
-  font-family: "Arial", sans-serif;
+  color: #000;
+  font-family: "Roboto", "Arial", sans-serif;
   padding: 0;
   margin: 0;
-  font-size: 16px;
-  line-height: 1.5;
 }
 
 a {
