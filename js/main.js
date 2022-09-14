@@ -30,9 +30,19 @@ elItems.forEach((item) => {
   });
 });
 
+// Form elements
+
 const elTask = document.forms.task;
+
+const tasks = [];
 
 elTask.addEventListener("submit", (e) => {
   e.preventDefault();
-  
+  let task = {};
+  for (let k of elTask) {
+    if (k.value) {
+      task[k.getAttribute("name")] = k.value;
+    }
+  }
+  tasks.push(task);
 });
