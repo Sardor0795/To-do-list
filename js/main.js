@@ -21,3 +21,11 @@ elAppPlusBtn.addEventListener("click", () => {
 elModalCloseBtn.addEventListener("click", () => {
   elModal.classList.remove("active");
 });
+
+const elItems = document.querySelectorAll(".item");
+
+elItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("finished");
+  });
+});
