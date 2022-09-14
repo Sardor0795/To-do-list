@@ -201,6 +201,7 @@ select:-webkit-autofill:focus {
 .item {
   padding: 15px;
   background-color: var(--status-false);
+  cursor: pointer;
 }
 
 .item__title {
@@ -217,9 +218,6 @@ select:-webkit-autofill:focus {
   margin-bottom: 25px;
 }
 
-.item__info {
-}
-
 .info {
   font-weight: 700;
   font-size: 18px;
@@ -228,14 +226,20 @@ select:-webkit-autofill:focus {
   justify-content: space-between;
 }
 
-.info__date {
-  margin-right: auto;
-}
-
-.info__name {
+.app__plus-btn-wrapper {
+  display: flex;
 }
 
 .app__plus-btn {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  width: 62px;
+  height: 62px;
+  background-color: #2cb932;
+  color: #fff;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
 /* RETINA BG */
