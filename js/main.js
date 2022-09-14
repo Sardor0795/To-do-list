@@ -29,3 +29,4 @@ elItems.forEach((item) => {
     item.classList.toggle("finished");
   });
 });
+
