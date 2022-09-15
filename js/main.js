@@ -45,10 +45,12 @@ const render = (array) => {
 };
 
 const del = (i) => {
-  tasks.splice(i, 1);
-  render(tasks);
-  let strTasks = JSON.stringify(tasks);
-  localStorage.setItem("tasks", strTasks);
+  if (confirm("O'chirish?")) {
+    tasks.splice(i, 1);
+    render(tasks);
+    let strTasks = JSON.stringify(tasks);
+    localStorage.setItem("tasks", strTasks);
+  }
 };
 
 const changeStatus = (i) => {
