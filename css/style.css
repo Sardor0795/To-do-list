@@ -391,6 +391,11 @@ select:-webkit-autofill:focus {
   transform: translateY(2px);
 }
 
+.form__add-btn.disabled {
+  background-color: red;
+  color: #fff;
+}
+
 .form__close-btn {
   width: 14px;
   height: 14px;

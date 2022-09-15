@@ -90,6 +90,20 @@ if (localStorage.getItem("tasks")) {
   render(tasks);
 }
 
+const elFormAddBtn = document.querySelector(".form__add-btn");
+
+const disable = () => {
+  for (let g of elTask) {
+    if (g.value == "") {
+      elFormAddBtn.classList.add("disabled");
+    }
+  }
+
+  setTimeout(() => {
+    elFormAddBtn.classList.remove("disabled");
+  }, 150);
+};
+
 elTask.addEventListener("submit", (e) => {
   e.preventDefault();
   let task = {};
