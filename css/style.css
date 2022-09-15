@@ -99,9 +99,11 @@ button {
 
 .container {
   width: 100%;
-  max-width: 369px;
+  max-width: 409px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* PLACEHOLDER STYLE */
